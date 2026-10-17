@@ -8,4 +8,7 @@
     "cortex-debug.variableUseNaturalFormat": false,
     "debug.hideSlowPreLaunchWarning": true,
     "debug.showInStatusBar": "never",
+    "clangd.arguments": [
+        "--compile-commands-dir=/home/tatin/projects/hackathon/HandGPT/firmware/vendor/alif_viewfinder/out/viewfinder/DevKit-E8-HP/debug"
+    ],
 }

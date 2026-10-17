@@ -136,15 +136,14 @@
                 "echo Connect > .cmd.jlink &&",
                 "echo Erase >> .cmd.jlink &&",
                 "echo Exit >> .cmd.jlink &&",
-                "JLink.exe -device AE822FA0E5597BS0_M55_HE -if swd -speed 4000 -commandfile .cmd.jlink"
+                "JLinkExe -device AE822FA0E5597LS0_M55_HP -if swd -speed 4000 -commandfile .cmd.jlink"
             ],
             "options": {
                 "cwd": "${workspaceFolder}/",
                 "shell": {
-                    "executable": "cmd.exe",
+                    "executable": "/bin/bash",
                     "args": [
-                        "/d",
-                        "/c"
+                        "-c"
                     ]
                 }
             },
@@ -155,17 +154,16 @@
             "type": "shell",
             "command": [
                 "echo Connect > .cmd.jlink &&",
-                "echo LoadFile \"out/viewfinder/AppKit-E8-HE/debug/viewfinder.elf\" >> .cmd.jlink &&",
+                "echo LoadFile \"out/viewfinder/DevKit-E8-HP/debug/viewfinder.elf\" >> .cmd.jlink &&",
                 "echo Exit >> .cmd.jlink &&",
-                "JLink.exe -device AE822FA0E5597BS0_M55_HE -if swd -speed 4000 -commandfile .cmd.jlink"
+                "JLinkExe -device AE822FA0E5597LS0_M55_HP -if swd -speed 4000 -commandfile .cmd.jlink"
             ],
             "options": {
                 "cwd": "${workspaceFolder}/",
                 "shell": {
-                    "executable": "cmd.exe",
+                    "executable": "/bin/bash",
                     "args": [
-                        "/d",
-                        "/c"
+                        "-c"
                     ]
                 }
             },
@@ -174,24 +172,24 @@
         {
             "label": "CMSIS Run",
             "type": "shell",
-            "command": "JLinkGDBServerCL.exe",
+            "command": "JLinkGDBServerCLExe",
             "options": {
                 "cwd": "${workspaceFolder}/",
                 "shell": {
-                    "executable": "cmd.exe",
+                    "executable": "/bin/bash",
                     "args": [
-                        "/d",
-                        "/c"
+                        "-c"
                     ]
                 }
             },
             "args": [
                 "-device",
-                "AE822FA0E5597BS0_M55_HE",
+                "AE822FA0E5597LS0_M55_HP",
                 "-endian",
                 "little",
                 "-if",
-                "swd-speed",
+                "swd",
+                "-speed",
                 "4000",
                 "-nohalt",
                 "-noir",
