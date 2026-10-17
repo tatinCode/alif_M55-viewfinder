@@ -1,7 +1,9 @@
 {
     "targetSet": {
         "alif": {
-            "activeTargetType": "AppKit-E8-HE"
+            "activeTargetType": "DevKit-E8-HP"
         }
-    }
+    },
+    "activeSolution": "../alif.csolution.yml",
+    "activeTarget": "DevKit-E8-HP"
 }
